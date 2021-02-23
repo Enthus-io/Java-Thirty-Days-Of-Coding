@@ -24,14 +24,14 @@ Think of this as a name (identifier) that points to (references) a location in m
 
 
 Each variable has a data type associated with it, which essentially restricts what that variable is allowed to reference. This means your code will not work if you attempt to perform operations on your variables that aren't allowed for that data type. To declare a variable named myVariable having the data type DataType, we write the following:
-
+   ```sh
 DataType myVariable;
 
-
+   ```
 If we want to declare a variable of type DataType named myVar1 and initialize it to be value (here, we are using the word  as a stand-in for a valid value of type DataType), we write:
-
+   ```sh
 DataType myVar1 = value;
-
+   ```
 In English, the above code is basically saying: "I'm creating a variable named myVar1; it refers to something of type DataType, and is assigned an initial value of value."
 
 
@@ -39,9 +39,9 @@ Note: The = operator is called the assignment operator, so you should interpret 
 
 
 A String is a data type that holds a sequence of characters. To create a String variable named myString that stores the value "Hi!", write the following line of code:
-
+   ```sh
 String myString = "Hi!";
-
+   ```
 
 The compiler will interpret the characters between the two quotation marks as a String. Saving a reference to our it as variable myString allows us to refer to it again and again by referencing our variable name, myString.
 
@@ -55,7 +55,7 @@ A sequence of packaged instructions that perform a task.
 
 Method
 In Object-Oriented programming, a method is a type of function that operates on the fields of a class.
-
+   ```sh
 int myMethod()
 {
 	// ...does cool stuff.
@@ -64,7 +64,7 @@ int myMethod()
 void myMethod(int myInt){
 	// ...does cool stuff.
 }
-
+   ```
 
 
 Object
@@ -76,28 +76,30 @@ Think of this as the flow of data from one place to another. Most of our challen
 
 
 The syntax for reading from stdin using the Scanner class is as follows:
-
+   ```sh
 Scanner scan = new Scanner(System.in);
+   ```
 This creates a new Scanner object that reads from the System.in stream and can be accessed using the variable name scan. To read in information from stdin, you just need to apply Scanner's methods to your scanner object. Here are two basic examples:
-
+   ```sh
 scan.next(); // returns the next token of input
 scan.hasNext(); // returns true if there is another token of input (false otherwise)
 scan.nextLine() // returns the next LINE of input
 scan.hasNextLine(); // returns true if there is another line of input
-
+   ```
 
 When you are finished reading from an input stream, you should close it to avoid a resource leak. The following line of code closes the Scanner object referenced by our  variable:
-
+   ```sh
 scan.close();
-
+   ```
 Let's say we want to assign a value received from stdin to some String that we'll name s, and then print it. We can accomplish this with the following code:
-
+   ```sh
 Scanner scan = new Scanner(System.in); // open scanner
 String s = scan.next(); // read the next token and save it to 's'
 scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
+   ```
+   
 If the input token is Hi!, the above code will print Hi!.
-
 
 You can also print text in quotes using System.out.println, or combine quoted text with a variable (e.g.: System.out.println("Input received: " + s);).
 
