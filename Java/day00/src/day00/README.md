@@ -4,7 +4,7 @@
 Class
 
 At its most basic level, a class is a collection of variables (fields) and functions called methods. A program is a collection of classes. The basic code for declaring a Java class is as follows:
-
+   ```sh
 class MyClass
 {
     // This is a single-line comment.
@@ -13,7 +13,7 @@ class MyClass
         This type of comment can span several lines
     */
 }
-
+   ```
 When declaring a class, the name should always start with a capital letter; this signifies to certain compilers (and human readers of your code) that it is a class (or other similarly-behaved structure that you'll learn about later). If you wish to use a compound phrase (e.g.: "my class") as your class name, you should write it in TitlelCase; this means you should capitalize each word and remove spaces between words (e.g.: "MyClass").
 
 
