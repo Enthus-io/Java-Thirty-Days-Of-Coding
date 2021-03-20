@@ -8,18 +8,24 @@ import java.util.regex.*;
 
 public class Solution {
 
+    // Complete the factorial function below.
+    static int factorial(int n) {
+        if(n == 0){
+            return 1;
+        }
 
+        return n * factorial(n - 1);
+    }
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        int i = 0;
+    public static void main(String[] args) throws IOException {
+
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        while(i < 10) {
-            System.out.println(n + " x " + ++i + " = " + (n * i));
-        }
+        int result = factorial(n);
+        System.out.println(result);
 
         scanner.close();
     }
