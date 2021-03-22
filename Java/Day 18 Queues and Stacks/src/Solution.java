@@ -3,6 +3,29 @@ import java.util.*;
 
 public class Solution {
     // Write your code here.
+    private Queue<Character> queue;
+    private Stack<Character> stack;
+
+    Solution(){
+        queue = new LinkedList<Character>();
+        stack = new Stack<Character>();
+    }
+
+    private void pushCharacter(char ch){
+        this.stack.push(ch);
+    }
+
+    private void enqueueCharacter(char ch){
+        this.queue.add(ch);
+    }
+
+    private char popCharacter(){
+        return this.stack.pop();
+    }
+
+    private char dequeueCharacter(){
+        return this.queue.remove();
+    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
