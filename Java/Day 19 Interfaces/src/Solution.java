@@ -5,8 +5,8 @@ interface AdvancedArithmetic {
     int divisorSum(int n);
 }
 
-class Calculator implements AdvancedArithmetic{
-    public int divisorSum(int n){
+class Calculator implements AdvancedArithmetic {
+    public int divisorSum(int n) {
         int sum = 0;
 
         for (int divisor = 1, dividend; divisor * divisor <= n; divisor++) {
