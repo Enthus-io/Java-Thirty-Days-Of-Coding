@@ -13,7 +13,7 @@ class Calculator implements AdvancedArithmetic {
             if (n % divisor == 0) {
                 dividend = n / divisor;
                 sum += dividend;
-                
+
                 if (divisor != dividend)
                     sum += divisor;
             }
