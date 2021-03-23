@@ -1,12 +1,24 @@
 import java.io.*;
 import java.util.*;
 
-interface AdvancedArithmetic{
+interface AdvancedArithmetic {
     int divisorSum(int n);
 }
-class Calculator implements AdvancedArithmetic {
-    public int divisorSum(int n) {
-        return 0;
+
+class Calculator implements AdvancedArithmetic{
+    public int divisorSum(int n){
+        int sum = 0;
+
+        for (int divisor = 1, dividend; divisor * divisor <= n; divisor++) {
+            if (n % divisor == 0) {
+                dividend = n / divisor;
+                sum += dividend;
+                
+                if (divisor != dividend)
+                    sum += divisor;
+            }
+        }
+        return sum;
     }
 }
 
@@ -19,7 +31,7 @@ class Solution {
 
         AdvancedArithmetic myCalculator = new Calculator();
         int sum = myCalculator.divisorSum(n);
-        System.out.println("I implemented: " + myCalculator.getClass().getInterfaces()[0].getName() );
+        System.out.println("I implemented: " + myCalculator.getClass().getInterfaces()[0].getName());
         System.out.println(sum);
     }
 }
