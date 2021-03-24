@@ -1,8 +1,5 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
+
 
 public class Solution {
 
@@ -14,5 +11,37 @@ public class Solution {
             a[a_i] = in.nextInt();
         }
         // Write Your Code Here
+        System.out.println("Array is sorted in " + bubbleSort(a, n) + " swaps.");
+        System.out.println("First Element: " + a[0]);
+        System.out.println("Last Element: " + a[n - 1]);
+    }
+
+    public static int bubbleSort(int[] a, int n){
+        int totalSwaps = 0;
+
+        for (int i = 0; i < n; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
+
+            for (int j = 0; j < n - 1; j++) {
+                // Swap adjacent elements if they are in decreasing order
+                if (a[j] > a[j + 1]) {
+                    int t = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = t;
+
+                    numberOfSwaps++;
+                }
+            }
+
+            totalSwaps += numberOfSwaps;
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
+
+        return totalSwaps;
     }
 }
