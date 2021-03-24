@@ -9,7 +9,12 @@ class Printer <T> {
      **/
 
     // Write your code here
-    
+    public void printArray(T[] arr) {
+        for (T ith: arr) {
+            System.out.println(ith);
+        }
+    }
+
 }
 
 public class Generics {
