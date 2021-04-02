@@ -10,10 +10,27 @@ class Node{
 }
 class Solution{
 
-    static void levelOrder(Node root){
-        //Write your code here
+    static Queue<Node> q = new LinkedList<>();
 
+    static void levelOrder(Node r) {
+        // Write your code here
+        if(r != null)
+            q.add(r);
+
+        while(!q.isEmpty()){
+            Node t = q.remove();
+
+            System.out.print(t.data + " ");
+
+            if(t.left != null)
+                q.add(t.left);
+
+            if(t.right != null)
+                q.add(t.right);
+        }
     }
+
+
 
     public static Node insert(Node root,int data){
         if(root==null){
