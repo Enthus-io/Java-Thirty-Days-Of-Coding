@@ -23,7 +23,16 @@ class Result {
 
     public static int bitwiseAnd(int N, int K) {
         // Write your code here
-
+        int result = 0;
+        for (int A = 1; A <= N; A++) {
+            for (int B = A + 1; B <= N; B++) {
+                int current = A & B;
+                if (current > result && current < K) {
+                    result = current;
+                }
+            }
+        }
+        return result;
     }
 
 }
