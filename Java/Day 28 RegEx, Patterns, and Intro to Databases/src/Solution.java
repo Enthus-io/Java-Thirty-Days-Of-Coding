@@ -15,7 +15,7 @@ public class Solution {
         int N = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         Pattern p = Pattern.compile(".*@gmail.com");
-        ArrayList<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
             String[] firstNameEmailID = scanner.nextLine().split(" ");
